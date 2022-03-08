@@ -1,0 +1,380 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=San-Serif);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+html, body   {
+  margin: 0;
+  
+	background:#fff;
+	
+}
+
+* {
+  font-family: 'Quicksand', san-serif;
+	color: #557C7B;
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: #FFF;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #557C7B;
+  height: 100px;
+  padding: 3.6em;
+	font-size: 1.2em;
+	position: relative;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+	color: #557C7B;
+}
+
+.menu > li {
+  margin: 0 2.4rem;
+color: #557C7B;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #557C7B;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+	  
+    position: absolute;
+    top: 0;
+    margin-top: 66px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+	  
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+	  display: flex;
+    
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: #557C7B;
+    background-color: white;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+/*flexbox logo and tagline*/
+.box {
+   display: flex;
+   align-items:center;
+}
+
+#Nameheader{
+	padding-top: 6%;
+	padding-left: 6%;
+	padding-right: 3%;
+	font-size: 2.1rem;
+	color:#D1B0A3;
+}
+
+#NameheaderContact{
+	padding-top: 6%;
+	padding-left: 0;
+	padding-right: 3%;
+	font-size: 2.1rem;
+	color:#D1B0A3;
+}
+
+#AboutMe{
+	padding-left: 6%;
+	padding-top: 6%;
+	padding-right: 0%;
+	font-size:1.2rem;
+	color:#557C7B;
+}
+
+#AboutMe2{
+	padding-left: 6%;
+	padding-right: 3%;
+	padding-top: 3%;
+	font-size:1.2rem;
+	color:#557C7B;
+}
+
+#AboutMeWork{
+	padding-left: 6%;
+	padding-top: 6%;
+	padding-right: 0%;
+	font-size:1.2rem;
+	color:#557C7B;
+}
+
+#Resume{
+	color:#D1B0A3;
+	padding-left: 6%;
+	padding-right: 3%;
+	padding-top: 3%;
+	font-size:1.5rem;
+	text-decoration: underline;
+}
+
+#ViewProjects{
+	color:#D1B0A3;
+	padding-left: 0%;
+	padding-right: 3%;
+	padding-top: 12%;
+	font-size:1.5rem;
+	text-decoration: underline;
+}
+
+#icons{
+	padding-left: 6%;
+	padding-top: 12%;
+}
+#iconsWork{
+	padding-left: 6%;
+	padding-top: 6%;
+}
+
+.curves{
+	border-collapse: collapse;
+	border-bottom-right-radius:70%;
+	perspective: 1px;
+	overflow: scroll;
+	z-index: 1;
+}
+
+.curves2{
+	border-collapse: collapse;
+	border-bottom-right-radius:70%;
+	perspective: 1px; 
+	overflow: scroll;
+	z-index: 1;
+}
+
+textarea {
+border: none;
+background-color: transparent;
+resize: none;
+outline: none;
+	border-bottom: solid 1px #557C7B;
+	color: #557C7B;
+}
+
+input {
+border: none;
+background-color: transparent;
+resize: none;
+outline: none;
+	border-bottom: solid 1px #557C7B;
+	color: #557C7B;
+}
+
+.submit {
+border: none;
+background-color: transparent;
+resize: none;
+outline: none;
+	border-bottom: solid 1px #D1B0A3;
+	color: #D1B0A3;
+}
+
+#space{
+	padding: 0 9% 0 9%;
+}
+
+#SingleIcon{
+	padding-left: 9%;
+}
+
+#SingleIcon1{
+	padding-left: 2%;
+}
+
+
+
+#BorderImage {
+	padding-left: 6%;
+  display: inline-block;
+  position: relative;
+}
+
+#BorderImage::before {
+	border-bottom-right-radius: 78%;
+  position: absolute;
+  top: 30%;
+  left: 21%;
+  width: 81%;
+  height: 81%;
+  border: 3px solid #D1B0A3;
+  content: '';
+	z-index: -1;
+	text-align: center;
+}
+
+
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;!important
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.6%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
